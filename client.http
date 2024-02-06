@@ -1,5 +1,26 @@
 @baseUrl = http://localhost:3333
 
 # @name create_poll
-POST {{baseUrl}}
+POST {{baseUrl}}/polls
 Content-Type: application/json
+
+{
+  "title": "Qual é o melhor framework Node.js",
+  "options": ["Express", "Fastify", "NestJS", "HapiJS"]
+}
+
+###
+
+# @name get_poll
+GET {{baseUrl}}/polls/207c177c-271f-4d34-a877-fca9e4cc9c1a
+Content-Type: application/json
+
+###
+
+# @name vote_on_poll
+POST {{baseUrl}}/polls/207c177c-271f-4d34-a877-fca9e4cc9c1a/votes
+Content-Type: application/json
+
+{
+  "pollOptionId": "3915010d-f6f3-4a7d-90ae-d23c05d03017"
+}
