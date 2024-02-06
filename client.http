@@ -1,0 +1,5 @@
+@baseUrl = http://localhost:3333
+
+# @name create_poll
+POST {{baseUrl}}
+Content-Type: application/json
